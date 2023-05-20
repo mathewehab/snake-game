@@ -1,0 +1,139 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: ÂµVision V5.37.0.0
+Copyright (C) 2022 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: farah ihab, Faculty of engineering, LIC=----
+ 
+Tool Versions:
+Toolchain:       MDK-Lite  Version: 5.37.0.0
+Toolchain Path:  C:\Keil_v5\ARM\ARMCLANG\Bin
+C Compiler:      ArmClang.exe V6.18
+Assembler:       Armasm.exe V6.18
+Linker/Locator:  ArmLink.exe V6.18
+Library Manager: ArmAr.exe V6.18
+Hex Converter:   FromElf.exe V6.18
+CPU DLL:         SARMCM3.DLL V5.37.0.0
+Dialog DLL:      DCM.DLL V1.17.5.0
+Target DLL:      lmidk-agdi.dll V???
+Dialog DLL:      TCM.DLL V1.56.1.0
+ 
+<h2>Project:</h2>
+C:\Users\farah\Downloads\Taskcreationsend\SnakeGame\SnakeGame.uvprojx
+Project File Date:  02/01/2023
+
+<h2>Output:</h2>
+*** Using Compiler 'V6.18', folder: 'C:\Keil_v5\ARM\ARMCLANG\Bin'
+Rebuild target 'Target 1'
+assembling startup_TM4C123.s...
+compiling UART.c...
+compiling freertos_evr.c...
+compiling system_TM4C123.c...
+bsp.c(39): warning: while loop has empty body [-Wempty-body]
+          while((UART0->FR & (1<<4)) != 0);                             /* wait until Rx buffer is not full */
+                                          ^
+bsp.c(39): note: put the semicolon on a separate line to silence this warning
+1 warning generated.
+compiling bsp.c...
+compiling main.c...
+compiling game.c...
+compiling croutine.c...
+compiling heap_1.c...
+compiling list.c...
+compiling event_groups.c...
+compiling port.c...
+compiling stream_buffer.c...
+compiling queue.c...
+compiling timers.c...
+compiling tasks.c...
+linking...
+Program Size: Code=22020 RO-data=1332 RW-data=12 ZI-data=14720  
+".\Objects\test1.axf" - 0 Error(s), 1 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                http://www.keil.com/pack/ARM.CMSIS.5.9.0.pack
+                ARM.CMSIS.5.9.0
+                CMSIS (Common Microcontroller Software Interface Standard)
+   * Component: CORE Version: 5.6.0
+
+Package Vendor: ARM
+                https://www.keil.com/pack/ARM.CMSIS-FreeRTOS.10.5.1.pack
+                ARM.CMSIS-FreeRTOS.10.5.1
+                Bundle of FreeRTOS for Cortex-M and Cortex-A
+   * Component: Config Variant: FreeRTOS Version: 10.5.1
+   * Component: Core Variant: Cortex-M Version: 10.5.1
+   * Component: Coroutines Version: 10.5.1
+   * Component: Event Groups Version: 10.5.1
+   * Component: Heap Variant: Heap_1 Version: 10.5.1
+   * Component: Message Buffer Version: 10.5.1
+   * Component: Stream Buffer Version: 10.5.1
+   * Component: Timers Version: 10.5.1
+
+Package Vendor: Keil
+                http://www.keil.com/pack/Keil.TM4C_DFP.1.1.0.pack
+                Keil.TM4C_DFP.1.1.0
+                Texas Instruments Tiva C Series Device Support and Examples
+   * Component: Startup Version: 1.0.1
+
+<h2>Collection of Component include folders:</h2>
+  ./RTE/RTOS
+  ./RTE/_Target_1
+  C:/Users/farah/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.5.1/CMSIS/RTOS2/FreeRTOS/Include
+  C:/Users/farah/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.5.1/Source/include
+  C:/Users/farah/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.5.1/Source/portable/GCC/ARM_CM4F
+  C:/Users/farah/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include
+  C:/Users/farah/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: ARM.FreeRTOS::RTOS:Config:FreeRTOS:10.5.1
+      Include file:  Config/ARMCM/FreeRTOSConfig.h
+
+   * Component: ARM.FreeRTOS::RTOS:Core:Cortex-M:10.5.1
+      Source file:   Source/tasks.c
+      Source file:   Source/list.c
+      Include file:  Source/include/FreeRTOS.h
+      Include file:  Source/include/queue.h
+      Include file:  Source/include/semphr.h
+      Include file:  Source/include/task.h
+      Source file:   Source/queue.c
+      Source file:   Source/portable/GCC/ARM_CM4F/port.c
+      Source file:   CMSIS/RTOS2/FreeRTOS/Source/freertos_evr.c
+
+   * Component: ARM.FreeRTOS::RTOS:Coroutines:10.5.1
+      Source file:   Source/croutine.c
+      Include file:  Source/include/croutine.h
+
+   * Component: ARM.FreeRTOS::RTOS:Event Groups:10.5.1
+      Include file:  Source/include/event_groups.h
+      Source file:   Source/event_groups.c
+
+   * Component: ARM.FreeRTOS::RTOS:Heap:Heap_1:10.5.1
+      Source file:   Source/portable/MemMang/heap_1.c
+
+   * Component: ARM.FreeRTOS::RTOS:Message Buffer:10.5.1
+      Include file:  Source/include/message_buffer.h
+      Source file:   Source/stream_buffer.c
+
+   * Component: ARM.FreeRTOS::RTOS:Stream Buffer:10.5.1
+      Source file:   Source/stream_buffer.c
+      Include file:  Source/include/stream_buffer.h
+
+   * Component: ARM.FreeRTOS::RTOS:Timers:10.5.1
+      Source file:   Source/timers.c
+      Include file:  Source/include/timers.h
+
+   * Component: ARM::CMSIS:CORE:5.6.0
+
+   * Component: Keil::Device:Startup:1.0.1
+      Include file:  Device/Include/TM4C123/TM4C123.h
+      Source file:   Device/Source/ARM/startup_TM4C123.s
+      Source file:   Device/Source/system_TM4C123.c
+Build Time Elapsed:  00:00:02
+</pre>
+</body>
+</html>
